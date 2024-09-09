@@ -1,0 +1,27 @@
+@mixin button($colors...) {
+    @if buttons{
+        .button{
+            display: inline-block;
+            margin: 1em;
+            color: map-get($button-colors, nth($colors,1));
+
+        a{
+            text-decoration: none;
+        }
+
+        @if length($colors)> 1{
+            @for $i from 2 through length($colors){
+                &.#{nth($colors,$i)}{
+                    color: map-get($button-colors, nth($colors,$i))
+                }
+            }
+        }
+        }
+}
+}
+
+@mixin crearGrid($columns, $rows){
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+}

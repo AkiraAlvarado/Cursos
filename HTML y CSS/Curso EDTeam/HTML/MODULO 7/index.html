@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+     <!-- Estructura basica de un formulario 
+        <form action="recibido.html">
+        <div>
+            <input type="text" placeholder="nombre">
+        </div>
+        <div>
+            <input type="text">
+        </div>
+        <button>Enviar</button> 
+    </form> -->
+    <fieldset>
+        <legend>Tus Datos</legend>
+        <form action="recibido.html">
+            <div>
+                <label for="username">Usuario</label>
+                <input type="text" id="username" placeholder="nombre">
+            </div>
+            <div>
+                <label>
+                    Apellido
+                    <input type="text">
+                </label>
+            </div>
+            <input type="submit" value="Ingresar">
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>Tus correos</legend>
+        <form action="recibido.html">
+            <div>
+                <label for="apekkudi">Apellido</label>
+                <input type="text" id="username" placeholder="apellido">
+            </div>
+            <div>
+                <label>
+                    Correo
+                    <input type="text">
+                </label>
+            </div>
+            <input type="submit" value="Ingresar">
+        </form>
+    </fieldset>
+
+    <h2>TIPO DE INPUTS</h2>
+    <form>
+        <label>
+            Input_text
+            <input type="text">
+        </label>
+        <label for="number">Input_number</label>
+        <input id="number" type="number">
+        <label>
+            Input_date
+            <input type="date">
+        </label>
+        <label>
+            Input_email
+            <input type="email">
+        </label>
+        <label>
+            Input_password
+            <input type="password">
+        </label>
+        <label>
+            Input_range
+            <input type="range">
+        </label>
+    </form>
+    <h2>INPUTS ESPECIALES</h2>
+    <fieldset>
+        <legend>Que quieres estudiar</legend>
+        <label>
+            HTML
+            <input type="checkbox" name="Cursos" checked> <!-- sirve para que se seleccione automaticamente -->
+        </label>
+        <label>
+            CSS
+            <input type="checkbox" name="Cursos">
+        </label>
+        <label>
+            JAVASCRIPT
+            <input type="checkbox" name="Cursos">
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Cual es tu sexo?</legend>
+        <label>
+            Hombre
+            <input type="radio" name="sexo">
+        </label>
+        <label>
+           Mujer
+            <input type="radio" name="sexo">
+        </label>
+    </fieldset>
+
+    <select name="pais">
+        <option value="pe">Perú</option>
+        <option value="ar">Argentina</option>
+        <option value="co" selected>Colombia</option> <!-- Se agrega automaticamente-->
+    </select>
+
+    <textarea name="comment" id="textarea" cols="30" rows="10"></textarea>
+</body>
+</html>

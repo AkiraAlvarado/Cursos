@@ -1,0 +1,155 @@
+header {
+    margin: 30px;
+    padding: 15px;
+    border: 20px red solid;
+    background: #CCCCCC url("th.jpeg") repeat-y;
+}
+#titulo {
+    font: bold 26px Verdana, sans-serif;
+} 
+.borde_1{
+    border-color: rgb(150,150,150); /*Define el color dle borde*/
+    border-radius: 5px; /*Define el radio del borde*/
+    border-style:dotted; /*define el estilo del borde*/
+    border-width: 5px; /*define el tamaño del borde*/
+    padding: 10px; /* define el padding*/
+    font-size: 20px; 
+    margin: 10px; /* define el margen*/
+    box-shadow: rgb(150,150,150) 5px 5px; /* genera una sombra */
+}
+
+.borde_2{
+    border-color: rgb(150,150,150); /*Define el color dle borde*/
+    border-radius: 5px; /*Define el radio del borde*/
+    border-style:solid; /*define el estilo del borde*/
+    border-width: 5px; /*define el tamaño del borde*/
+    padding: 10px; /* define el padding*/
+    font-size: 20px; 
+    margin: 10px; /* define el margen*/
+    box-shadow: rgb(150,150,150) 5px 5px 10px; /* genera una sombra más difusa*/
+}
+
+.text_shadow{
+    border-color: rgb(150,150,150); /*Define el color dle borde*/
+    border-radius: 5px; /*Define el radio del borde*/
+    border-style:solid; /*define el estilo del borde*/
+    border-width: 5px; /*define el tamaño del borde*/
+    padding: 10px; /* define el padding*/
+    font-size: 20px; 
+    margin: 10px; /* define el margen*/
+    text-shadow: rgb(26, 23, 23) 1px 1px 3px; /* genera una sombra más difusa*/
+}
+
+.display{
+    float:left;
+    margin: 15px;
+}
+
+.ver{
+    overflow: auto;
+}
+
+#cajapadre1 {
+    width: 600px;
+    border: 1px solid;
+   }
+   #caja-1 {
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: #AAAAAA;
+   }
+   #caja-2 {
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: #CCCCCC;
+   }
+   #caja-3 {
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: #AAAAAA;
+   }
+   #caja-4 {
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: #CCCCCC;
+   }
+   .restaurar {
+    clear: both;
+   } 
+
+
+   #cajapadre2 {
+    position: relative;
+    width: 365px;
+    height: 274px;
+    overflow: hidden;
+
+   }
+   #contenedor {
+    position: absolute;
+    top: 0px;
+    width: 365px;
+    height: 324px;
+
+    transition: top 0.3s ease-in-out 0s;
+   }
+   #contenedorsuperior {
+    width: 365px;
+    height: 274px;
+   }
+   #contenedorinferior {
+    width: 365px;
+    height: 35px;
+    padding-top: 15px;
+    background-color: rgba(200, 200, 200, 0.8);
+    text-align: center;
+   }
+   #contenedor:hover {
+    top: -50px;
+   } 
+   
+   /*
+   column-count—Esta propiedad especifica el número de columnas que el navegador tiene
+    que generar para distribuir el contenido del elemento.
+
+    column-width—Esta propiedad declara el ancho de las columnas. El valor se puede
+    declarar como auto (por defecto) o en cualquiera de las unidades de CSS, como píxeles o
+    porcentaje.
+
+    column-span—Esta propiedad se aplica a elementos dentro de la caja para determinar si
+    el elemento se ubicará en una columna o repartido entre varias columnas. Los valores
+    disponibles son all (todas las columnas) y none (por defecto).
+
+    column-fill—Esta propiedad determina cómo se repartirá el contenido entre las
+    columnas. Los valores disponibles son auto (las columnas son completadas de forma
+    secuencial) y balance (el contenido se divide en partes iguales entre todas las columnas).
+
+    column-gap—Esta propiedad define el tamaño del espacio entre las columnas. Acepta un
+    valor en cualquiera de las unidades disponibles en CSS, como píxeles y porcentaje.
+
+    columns—Esta propiedad nos permite declarar los valores de las propiedades columncount y column-width al mismo tiempo. 
+
+    ---------------------------------------------------------------------------------------
+
+    column-rule-style—Esta propiedad define el estilo de la línea usada para representar la
+    división. Los valores disponibles son hidden (por defecto), dotted, dashed, solid,
+    double, groove, ridge, inset, y outset.
+
+    column-rule-color—Esta propiedad especifica el color de la línea usada para representar
+    la división.
+
+    column-rule-width—Esta propiedad especifica el ancho de la línea usada para
+    representar la división.
+
+    column-rule—Esta propiedad nos permite definir todos los valores de la línea al mismo
+    tiempo*/
+
+

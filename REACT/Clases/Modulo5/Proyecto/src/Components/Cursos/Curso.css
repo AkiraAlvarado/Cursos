@@ -1,0 +1,7 @@
+img{
+   transition: 1s all;
+   padding: 4rem;
+}
+.desactivada{
+   background-color: red;
+}

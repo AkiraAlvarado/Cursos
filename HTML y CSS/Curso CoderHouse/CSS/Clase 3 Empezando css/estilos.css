@@ -1,0 +1,88 @@
+p:nth-child(1) {
+    background-color: #999999;
+   }
+   p:nth-child(2) {
+    background-color: #CCCCCC;
+   }
+   p:nth-child(3) {
+    background-color: #999999;
+   }
+   p:nth-child(4) {
+    background-color: #CCCCCC;
+   } 
+
+p:nth-child(4) {
+    font-size: 20px;
+} 
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+ }
+ 
+.rojo{
+    color: red;
+}
+
+.azul{
+    color: rgb(62, 62, 173);
+}
+
+.font_style_1{
+    font-style:normal; /*Declara el estilo de letra normal*/
+}
+.font_style_2{
+    font-style: italic;  /*Declara el estilo de letra italtica*/
+}
+.font_weight_1{
+    font-weight: normal; /*Declara el estilo de letra normal*/
+}
+.font_weight_2{
+    font-weight: 1000; /*Declara el estilo de letra negrita*/
+}
+.font_family_1{
+    font-family: 'Times New Roman', Times, serif; /*Declara el estilo de letra Times new Roman*/
+}
+.font_family_2{
+    font-family: 'Courier New', Courier, monospace;
+}
+.font_family_3{
+    font-family: sans-serif;
+}
+.alig_1{
+    text-align: left;
+}
+.alig_2{
+    text-align: center;
+}
+.alig_3{
+    text-align: right;
+}
+.alig_4{
+    text-align: justify;
+}
+.letter_spacing{
+    letter-spacing: 20px; /*Declara espacio entre letras*/
+}
+.word_spacing{
+    word-spacing: 20px; /*Declara esopacio entre palabras*/
+}
+.interlineado{
+    line-height: 100px;
+}
+input:valid{
+    background: #EEEEFF; /*Cuando un inoput es valido o invalido*/
+}
+input:invalid{
+    background: #FFEEEE;
+}
+
+input:optional{
+    border: 2px solid #009999; /*Para cuando uno es obligatorio o no*/
+}
+input:required{
+    border: 2px solid #000099;
+} 
+
+li:hover{
+    color:wheat ;
+}

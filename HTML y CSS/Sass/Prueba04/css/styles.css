@@ -1,0 +1,11 @@
+body {
+  font-size: 40px;
+  border: 1pxsolidred; }
+  body::before {
+    content: "SOLID"; }
+
+h2 {
+  font-size: 0.0625em; }
+
+h1 {
+  border-color: red; }

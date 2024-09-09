@@ -1,0 +1,89 @@
+      /*
+Position fixed -> Pierde su espacio reservado
+- Su referencia siempre es el viewport
+
+(NIVELES DE APILAMIENTO)
+1. Elementos con nivel de apilamiento negativo
+2. Elementos con position static
+3. Elementos con nivel neutro (0)
+4.- Elementos con nivel de apilamiento mayor a 0
+
+Elementos principales que usen Z-INDEX
+Elementos posicionados
+Elementos hijos de flex y gri containers con z-index distinto a auo
+Elementos con opacity  o filtro
+*/
+
+/*Ejercicio 1 */
+.element{
+    width   : 200px;
+    height  : 200px;
+    position: relative;
+}
+
+.element:nth-of-type(1){
+    background-color: red;
+    top             : 100px
+}
+.element:nth-of-type(2){
+    background-color: yellow;
+}
+.element:nth-of-type(3){
+    background-color: green;
+}
+.element:nth-of-type(4){
+    background-color: blue;
+}
+
+.child{
+    width           : 150px;
+    height          : 150px;
+    background-color: crimson;
+    pointer-events  : none;     /*Hace que no sea detectable para el mouse
+    solo seria visual
+    */
+}
+
+/*Ejercicio 2 */
+*{
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+main{
+    padding         : 1rem;
+    width           : 100%;
+    height          : 100%;
+    background-color: white;
+}
+p{
+    margin-bottom: 2rem;
+}
+.modal{
+    position        : fixed;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(0, 0, 0 , 0.5);
+    opacity         : 0;
+    transition      : opacity 0.25s;
+    pointer-events  : none;
+}
+
+.modal.active{
+    opacity       : 1;
+    pointer-events: initial;
+}
+
+.content{
+    background-color: red;
+    position        : absolute;
+    text-align      : center;
+    max-width       : 500px;
+    width           : 90%;
+    left            : 50%;
+    top             : 50%;
+    transform       : translate(-50%, -50%) ;
+    padding         : 1rem;
+    border-radius   : 0.25rem;
+}

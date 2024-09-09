@@ -1,0 +1,49 @@
+.cajas{
+    background-color: aquamarine;
+    list-style-type: none;
+    height: 10em;
+}
+.stretch{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.start{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+.end{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+.center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+ul li{
+    padding:1rem;
+    margin: 1rem;
+    background-color: aqua;
+    border: 1px solid blue;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;}
+ #main{
+    display: flex;}
+ article, nav, aside{
+    background-color: pink;}
+ header, footer{
+    background-color: grey;
+    margin:1px;}
+ article, nav, aside, header, footer{
+    padding: 1rem;
+    flex-direction: row;
+    flex-grow: 1;
+    margin:1px;}
+ 

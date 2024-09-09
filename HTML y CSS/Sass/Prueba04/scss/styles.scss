@@ -1,0 +1,47 @@
+
+// Las funciones siempre devuelven un solo valor
+//Ejemplos
+@function double($number){
+    @if type-of($number) == number{
+        $value: $number* 2;
+    @return $value
+    }
+    @return null;
+}   
+
+@function   em($px, $base: 16px){
+    @if type-of($px) == number and unit($px) == 'px'{
+        @return $px / $base * 1em;
+    }
+}
+
+
+//Funciones de string
+$width : 1px;
+$style: solid;
+$color : red;
+body{
+    font-size: double(20px);
+    border: unquote($width + '' + $style + '' + $color);
+    &::before{
+        content : to-upper-case(quote($style))
+    }
+}
+h2{
+    font-size: em(1px);
+}
+
+//Funciones numericas
+@function columns($columns, $total-columns){
+    @return $columns / $total-columns;
+}
+
+//Funciones de mapas y listas
+
+$border : 1px solid red;
+
+h1{
+    border-color: nth($border,3);
+}
+
+// --output-style = exanded | compressed | nested | compact

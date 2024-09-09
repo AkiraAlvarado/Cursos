@@ -1,0 +1,23 @@
+body {
+  background-color: red;
+  font-size: 32px; }
+
+/*
+.button{
+    @include button;
+}*/
+.button {
+  display: inline-block;
+  margin: 1em;
+  color: blue; }
+  .button a {
+    text-decoration: none; }
+  .button.secondary {
+    color: yellow; }
+  .button.alert {
+    color: red; }
+
+h1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr); }

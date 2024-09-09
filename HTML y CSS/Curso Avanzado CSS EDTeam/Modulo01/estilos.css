@@ -1,0 +1,131 @@
+                    /*
+position: static / relative / absoluted / fixed / sticky
+
+
+Cuando esta posicionado puede usar las propiedades offset (nos permite poder ubicar)
+
+Top,left, bottom, right{
+- Para poder usar estas propiedades , hay que tener en cuenta que se debe 
+posicionar el elemento, además de que se toman como punto de referencia
+los bordes para moverse, además si queremos usar height 50% , el contenedor 
+padre debe tener altura fija
+}
+Relative{
+- No pierde su espacio Reservado
+- Su Posición inicial en la web (donde se crea, esa es su posición)
+}
+
+Absolute{
+- Si pierde su espacio reservado
+- Su referencia es el acenstro más cercano que este posicionado
+- En caso no tenga ancestros posicionados su referencia es el Body
+}
+*/
+
+* {
+  margin         : 0;
+  padding        : 0;
+  box-sizing     : border-box;
+  list-style-type: none;
+}
+
+             
+
+  body {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  min-height     : 100vh;
+}
+
+.container{
+  position  : relative;
+  text-align: center
+}
+
+.container:hover .tooltip{
+  opacity: 1; /*Cuando el mouse este encima del container , el tooltip aparece
+  gracias a la propiedad opacity*/
+  top    : -2.75rem
+}
+
+
+.tooltip{
+  opacity   : 0;
+  position  : absolute;
+  top       : -3rem;
+  transition: opacity 0.25s, top 0.25s;
+}
+
+.tooltip .content{
+    background-color: black;
+    color           : white;
+    padding         : 0.5rem 0.75rem;
+    border-radius   : 0.25rem;
+    white-space     : nowrap;
+}
+
+.tooltip .triangle{
+  position        : absolute;
+  background-color: black;
+  width           : 10px;
+  height          : 10px;
+  bottom          : 0;
+  transform       : translate(-50%, 50%) rotate(45deg);
+  left            : 50%;
+  bottom          : 0;
+} */
+
+            /*Ejercicio 2*/
+
+body{
+  font-family: sans-serif;
+}
+.header {
+  width     : 100%;
+  background: black;
+}
+
+.nav{
+  display        : flex;
+  justify-content: center;
+}
+
+.menu{
+  display: flex;
+}
+
+.submenu{
+  position        : absolute;
+  top             : 100%; /*Hace que este lo más abajo posible del contenedor header es como
+  decir margin-top 100%*/
+  background-color: black;
+  flex-direction: column;
+  display: none;
+}
+
+.submenu .submenu{
+  left: 100%;
+  top: 0;
+}
+
+.item{
+  position: relative;
+}
+
+.item:hover > .submenu{
+  display         : flex;
+}
+
+.link{
+  color          : white;
+  display        : inline-block;
+  text-decoration: none;
+  padding        : 0.5em 1.5em;
+}
+
+.link:hover {
+  background-color: grey;
+
+}

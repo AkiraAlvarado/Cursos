@@ -1,0 +1,84 @@
+/* 
+1. Especificidad
+2. Cascada
+3. Herencia
+
+Estos conceptos nos ayudan a entender como funciona CSS, cómo resuelve los conflictos y cómo se definen las arquitecturas CSS.
+* SMACSS
+* OOCSS
+* ITCSS
+
+*/
+
+/* 
+1. ESPECIFICIDAD
+
+    General
+---------------
+ ------------
+  ----------
+   --------
+    ------
+     ----
+      --
+   Específico
+
+
+
+   Etiquetas y pseudoelementos:          1
+   Clases, atributos y pseudoclases:    10
+   Id:                                 100
+   Estilos en línea:                  1000
+
+*/
+
+.title {
+    color: red;
+    /* color: green; especifidad 10 se toma como prioridad*/
+}
+
+.title {
+    color: blue;
+}
+
+h1 {
+    color: purple;
+}
+
+#title {
+    color: steelblue;
+}
+
+/* Herencia
+    inherit
+    initial
+*/
+
+body {
+    /* color: blue; */
+}
+
+h2 {
+    color: red;
+}
+
+ul {
+    color: green;
+}
+
+.last {
+    color: orange;
+}
+
+p {
+    color: red;
+}
+
+a {
+    color: inherit;
+}
+
+span {
+    font-size: initial;
+    font-weight: initial;
+}

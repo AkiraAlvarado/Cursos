@@ -1,0 +1,33 @@
+*{
+box-sizing: border-box;
+}
+
+body{
+    max-width:1400px;
+    margin: 0 auto;
+}
+.secciones{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+    background-color: red;
+}
+
+
+.secciones .hoja{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.secciones .hoja img{
+    width:50%;
+    border-radius: 1em;
+    box-shadow: 2px 3px 10px;
+}
+.inline{
+    display: inline-block;
+    width: 80%;
+}

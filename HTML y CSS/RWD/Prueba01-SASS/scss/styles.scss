@@ -1,0 +1,71 @@
+$breakpoint: (
+    small: 0px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+);
+
+@mixin rwd($bp){
+    @media screen and (min-width: map-get($breakpoint, $bp)){
+        @content;
+    }
+}
+
+body{
+    background-color: green;
+    @include rwd(large){
+        background-color: yellow;
+    }
+}
+
+// mixin para hacer la proporción que tu desees con css grid
+@mixin ratio($w,$h){
+    display: grid;
+    grid-template-columns: repeat($w, 1fr);
+    grid-template-rows: repeat($h, 1fr);
+    position: relative ;
+
+    &::before{
+        content : "";
+        display: block;
+        padding-bottom: 100% ;
+    }
+}
+
+
+// Responsive para el video 
+.video {
+
+    display :grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows : repeat(9, 1fr);
+    background-color: red;
+
+    &::before {
+    content : "";
+    display : block;
+    padding-bottom : 50%;
+    }
+}
+
+
+/* Container de relleno*/
+.container{
+    width: 70%;
+    max-width: 960px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  //Cualquier imagen max with 100% solo esto seria suficiente
+  img{
+    width: 100%;
+    max-width: 100%;
+  }
+// solo es prueba
+  .imagen{
+    grid-column: 1/17;
+    grid-row: 1/10;
+  }

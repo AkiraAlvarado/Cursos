@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Responsive web design</h1>
+        <img src="perroimagen.jpg">
+    </div>
+
+    <div class="container">
+        <div class="video">
+        </div>
+    </div> 
+
+    <!-- Sin necesidad de css nos permite decir al navegador que imagen poner
+    según cada pantalla-->
+    <picture>
+        <source srcset="perroimagen.jpg" media="(min-width: 640px)">
+        <img src="perroimagen.jpg">
+    </picture>
+</body>
+</html>

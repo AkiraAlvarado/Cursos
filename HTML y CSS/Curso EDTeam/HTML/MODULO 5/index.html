@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido imbebido</title>
+</head>
+<body>
+    <h1>Contenido imbebido</h1>
+    <!-- svg -> vectorial
+    jpg, jpeg -> fotos, imagenes generales ,etc
+    png -> para transparencias o colores planos
+    gif -> animaciones o videos cortos
+    webp -> combinan lo mejor de jpg y png con menos peso
+    avif -> tiene mejor compresión que webp -->
+
+    <!-- picture (sirve para asegurar que uno de los 2 sirva,
+        si uno no se encuentra se muestra el otro) -->
+    <picture>
+        <source srcset="donald.webp">
+        <source srcset="donald.jpg">
+    </picture>
+
+    <!-- figure -->
+    <figure>
+        <img src="donald.jpg" alt="cara del pato donald" > <figcaption>imagen
+            dek pato donald <!--Una leyenda-->
+        </figcaption>
+    </figure>
+
+    <!--audio y video-->
+    <video src="video.mp4" controls poster="imagen.jpg">s</video>
+    <!--Controls para poner la portada, se recomienda mandar de youtube-->
+</body>
+</html>

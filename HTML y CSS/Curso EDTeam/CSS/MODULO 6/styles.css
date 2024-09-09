@@ -1,0 +1,153 @@
+/* Pseudoclases 
+
+Permiten seleccionar elementos segun su estado o alguna condición.
+Se indican con dos puntos : 
+*/
+
+/* :hover {
+    background: yellow;
+} 
+
+h1:hover {
+    background: yellow;
+} /*cuando se pasa el mouse por el elemento 
+se cumple con la propiedad*/
+
+h1 :hover {
+    background: yellow;
+} */
+
+:root { /* elemento HTML */
+    /* --color: pink; */
+}
+
+h1 {
+    /* background: var(--color); */
+}
+
+/* :hover :active :visited */
+
+/* .box {
+    background: yellow;
+    width: 400px;
+    height: 250px;
+    transition: all .3s;
+} */
+
+.box p {
+    /* display: none; */
+}
+
+.box:hover p {
+    /* display: block; */
+}
+
+.box:hover {
+    /* background: pink;
+    width: 300px;
+    height: 180px; */
+}
+
+/* a:visited {
+    color: green;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: red;
+} */
+
+/* :target :not :empty */
+
+/* .secreto {
+    display: none;
+}
+
+.secreto:target {
+    display: block;
+}
+
+p:not(.p2) {
+    color: red;
+}
+
+p {
+    margin: 0;
+}
+
+p:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+div:not(:empty) {
+    background: yellow;
+    padding: 1em;
+    width: 200px;
+} */
+
+/* :first-child :last-child */
+
+.h:first-child {
+   /* background: yellow;  */
+}
+
+/* :first-of-type :last-of-type */
+
+.p:first-of-type {
+    /* background: yellow;  */
+}
+
+/* :nth-child()  :nth-last-child()
+
+    :nth-child(even) :nth-last-child(odd)
+    :nth-child(X) :nth-last-child(X)
+    :nth-child(Xn) :nth-last-child(Xn)
+    :nth-child(Xn+-Y) :nth-last-child(Xn+-Y)
+
+
+*/
+
+p:nth-last-child(2n+1) {
+    /* background: yellow; */
+}
+
+/* Trucos CSS
+    Encontrar los primeros X elementos
+    Encontrar los últimos X elementos
+*/
+
+/* p:nth-child(-n + 5){
+    background: yellow;
+}
+p:nth-last-child(-n + 5){
+    background: yellow;
+} */
+
+/* Seleccionar los elementos a partir de un numero X */
+
+/* p:nth-child(n + 5){
+    display: none;
+}
+
+p:nth-last-child(n + 5){
+    display: none;
+} */
+
+/* Seleccionar todos los elementos pares a partir del 5to */
+.p:nth-child(odd):nth-child(3n) {
+    /* background: yellow; */
+}
+
+
+
+/* :nth-of-type() :nth-last-of-type()*/
+.p:nth-child(3) {
+    background: pink;
+}
+
+p:nth-of-type(3){
+    background: lime;
+}

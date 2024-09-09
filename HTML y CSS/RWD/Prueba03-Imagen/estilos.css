@@ -1,0 +1,31 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Esto haria que se haga responsive*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Otra manera de hacerlo con proporcioones*/
+
+/*Mixin para SASS*/
+.responsive {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  background: url(perroimagen.jpg) center/cover;
+}
+.responsive::before {
+  content: "";
+  display: block;
+  padding-bottom: 100%; /*Se hace para que la imagen se pueda ver totalmente completa*/
+}

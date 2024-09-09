@@ -1,0 +1,72 @@
+@import "components/menu";
+
+p{
+    font-size:32;
+}
+
+%button{
+    display: inline-block;
+    margin: 1em 0;
+}
+
+.button{
+    @extend %button; // importa todas las caracteristicas del boton
+}
+
+.button-alert{
+    @extend %button;
+    background: red;
+}
+
+/*------------------------------------------------------------------------*/
+@if 5>3{
+    *{
+        outline: 1px solid red;
+    }
+} @else if (3<5 ) and (1==1){
+    *{
+        display: block;
+    }
+}
+
+
+// Iteración
+
+@for $i from 1 through 5{
+    .column-#{$i * 5}{
+        width: $i *5%;
+    }
+}
+
+
+// each
+$colors2: red green blue;
+
+@each $colors in $colors2{
+    .button-#{$colors}{
+        color: $colors;
+    }
+}
+
+$colors: (
+    primary: red,
+    secondary: green,
+    tertiary: blue
+);
+@each $key, $value in $colors{
+    .button-#{$key}{
+        background: $value;
+    }
+}
+
+// ejercicio
+
+$colors: hsl(0,100,50);
+@for $i from 1 through 360{
+    $colors: append( $colors, hsl( $i, 100, 50), comma);
+}
+
+body{
+    background: radial-gradient(circle at center,  $colors);
+    min-height: 100vh;
+}

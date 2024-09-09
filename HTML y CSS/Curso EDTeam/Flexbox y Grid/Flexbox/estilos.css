@@ -1,0 +1,71 @@
+.container{
+    display: flex;
+    height: 200px;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+}
+
+.container::before{
+    content: "";
+    display: block;
+    height: 5px;
+    margin-right: 0;
+    flex: 1;
+    margin-left: .5em;
+    background: linear-gradient(to right, red,yellow);
+}
+.container::after{
+    content: "";
+    display: block;
+    height: 5px;
+    flex: 1;
+    margin-right: 0;
+    margin-right:  .5em;
+    background: linear-gradient(to left, red,yellow);
+}
+
+.container2{
+    display: flex;
+    font-size: 3em;
+    background-color: blue;
+}
+.item{
+    background-color: steelblue;
+    flex-grow:1 ; 
+    /* flex grow indica el factor de crecimiento. el navegador
+    divide el espacio disponible entre la cantidad total de factores de 
+    crecimiento y se los asigna a los items*/
+}
+.item:nth-child(even){
+    background-color: cyan;
+}
+.item2{
+    flex-basis: 0; /*hace que todos los items, tengan el mismo tamaño
+    sin importar el contenido*/
+}
+
+.container3{
+    display: flex;
+    font-size: 2em;
+    background-color: red;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+.item3{
+    background-color:blue ;
+}
+.item3:nth-child(even){
+    background-color: cyan;
+}
+
+.item3:nth-child(3){
+    align-self: flex-start;
+}
+
+.disccount{
+    order:-1; /* hace que por ejemplo productos de descuento
+    se queden arriba*/
+}

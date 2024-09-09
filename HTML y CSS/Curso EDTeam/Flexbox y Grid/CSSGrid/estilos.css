@@ -1,0 +1,44 @@
+.container{
+    display: grid;
+    height: 300px;
+    background-color: yellow;
+    font-size: 2em;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 6fr 3fr;
+    grid-column-gap: 2em;
+    grid-row-gap: .5em;
+
+    /* puedo usar grid-template-columns: repeat(12,1fr) para determinar que 
+    hay 12 columnas en una fila. tambien se puede poner la medida como (12,2em)*
+    tambien se puede poner grid-column: span2 , significa que ocupada 2 partes*/
+    /
+}
+
+.item{
+    background: pink;
+}
+.item:nth-child(even){
+    background-color: cyan;
+}
+
+/*Recordemos que primero siempre se especifica el número de lineas y columnas ´por ejemplo
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 200px 1fr;
+    grid-template-rows: 50% 100px;
+
+    luego cuanto ocupa cada uno
+
+    .item {
+    grid-column: 2 / 4; /* El elemento ocupará desde la segunda hasta la cuarta columna */
+    /*grid-row: 1 / span 2; El elemento ocupará desde la primera fila y se extenderá dos filas */
+
+    /*Podemos usar grid-template-columns: fit-contennt(200px), esto hara que el minimo valor de la celda
+    sea el contenido y el maximo sea 200px*/
+
+    /*repeat(auto-fill,200px) Crea tantas columnas como puedas de 200 px, sino puedes no hagas mas*/
+
+    /* grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); el minmax nos dice, como minimo un tamaño
+    y como máximo lo ultimo , NUNCA CREZCAS DE AHI*/
+
+    /* alinear items alig-itemsm ainear Tracks alig-content y justifify-content*/

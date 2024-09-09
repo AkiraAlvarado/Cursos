@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <link rel="shortcut icon" href="mountain-plover.png">
+</head>
+<body>
+    <h1> Clase 1</h1>
+    <h2>LISTAS</h2>
+    <!--- VERSIÓN 1-->
+    <ol> <!--- Define una lista ordenada de artículos (númericos)-->
+        <li>
+            <div>Comidas Criollas</div>
+            <ul> <!--- Define una lista no ordenada (viñetas)-->
+                <li>Carapulcra</li> <!--- Define un artículo de la lista-->
+                <li>Arroz con Pollo</li>
+                <li>Tallarines Verdes</li>
+            </ul>
+        </li>
+        <li>
+            <div> Comidas Marinas</div>
+            <ul>
+                <li>Ceviche</li>
+                <li>Arroz con Mariscos</li>
+                <li>Filete de Pescado</li>
+            </ul>
+        </li>
+    </ol>
+
+    <!--- VERSIÓN 2 (cambiamos ol por ul)--> 
+
+    <ul> <!--- Define una lista ordenada de artículos (númericos)-->
+        <li>
+            <div>Comidas Criollas</div>
+            <ol> <!--- Define una lista no ordenada (viñetas)-->
+                <li>Carapulcra</li> <!--- Define un artículo de la lista-->
+                <li>Arroz con Pollo</li>
+                <li>Tallarines Verdes</li>
+            </ol>
+        </li>
+        <li>
+            <div> Comidas Marinas</div>
+            <ol>
+                <li>Ceviche</li>
+                <li>Arroz con Mariscos</li>
+                <li>Filete de Pescado</li>
+            </ol>
+        </li>
+    </ul>
+
+
+    <h2>TABLAS</h2>
+    <table>
+        <th>Columna1 </th> <!-- Define los titulos-->
+        <th>Columna2</th>
+        <th>Columna3</th>
+        <th>Columna4</th>
+        <tr>
+            <td>F1 C1</td>
+            <td>F1 C2</td>
+            <td>F1 C3</td>
+            <td>F1 C4</td>
+        </tr>
+        <tr>
+            <td>F2 C1</td>
+            <td>F2 C2</td>
+            <td>F2 C3</td>
+            <td>F2 C4</td>
+        </tr>
+    </table>
+    <h2>FORMULARIOS</h2>
+
+    <forms name="Inputs" method="get">
+        <input type="text">
+        <input type="email">
+        <input type="search">
+        <input type="url">
+        <input type="tel">
+        <input type="number">
+        <input type="range">
+        <input type="password">
+        <input type="color">
+    </forms>
+    
+    <forms>  <!-- Botones de formulario -->
+        <input type="submit" value="Enviar forms">
+        <input type="reset" value="Limpiar forms">
+        <input type="button" value="sin accion|">
+    </forms>
+
+    <form> <!-- Botones de radio (Solo se puede elegir una opción) -->
+        <div>hombre</div>
+        <input type="radio" name="sexo" value="hombre" />
+        <div>mujer</div>
+        <input type="radio" name="sexo" value="mujer" />
+    </form>
+
+    <form><!--Casilla de Chequeo (de toda la lista de opciones, el usuario puede optar por una, todas o ninguna opción.) -->
+        <input id="contrato" type="checkbox" name="acepta" value="1" />
+        <label for="contrato">Acepta términos y condiciones</label>
+    </form>
+    
+    <form><!-- Etiqueta Label -->
+        <label for="nombre_apellido">Nombre:</label>	
+        <input type="text" name="nombre_apellido" />
+    </form>
+
+    <form><!-- Menú desplegable -->
+        <select name="talles">
+          <option value="L">Large</option>
+          <option value="M">Medium</option>
+          <option value="S">Small</option>
+        </select>
+    </form>
+
+    <form name="forms" >
+        <fieldset>
+          <legend>Formulario de Prueba</legend>
+            <div>Sexo:</div>
+            <input type="radio" id="hombre" name="genero" value="hombre">
+            <label for="hombre">Hombre</label><br>
+            <input type="radio" id="mujer" name="genero" value="mujer">
+            <label for="mujer">Mujer</label><br>
+            <br>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Nombre">
+            </div>
+            <br>
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" placeholder="apellido">
+            </div>
+            <br>
+            <label for="talla">Talla:</label>
+            <select name="talla">
+                <option value="L">largo</option>
+                <option value="P">pequeño</option>
+            </select>
+            <br><br>
+            <input type="submit">
+            <textarea>Hola</textarea>
+            <button></button>
+        </fieldset>
+
+    </form>
+    <!-- Etiqueta IFRAME para agregar una pagina html-->
+    <iframe src="https://www.youtube.com/watch?v=CRJMxCvrtWY" width="300" height="300">MORAT</iframe>
+    
+    <h2>ejemplo</h2>
+
+    <form name="formulario" method="get" action="procesar.php">
+        <p><label>Nombre: <input type="text" name="nombre"maxlength="15"></label></p>
+        
+        <p><label><input type="radio" name="edad" value="15" checked> 15 Años</label></p>
+        <p><label><input type="radio" name="edad" value="30"> 30 Años</label></p>
+        <p><label><input type="radio" name="edad" value="45"> 45
+       Años</label></p>
+        <p><label><input type="radio" name="edad" value="60"> 60
+       Años</label></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form> 
+
+    <form name="formulario" method="get" action="procesar.php">
+        <p><label>Nombre: <input type="text" name="nombre"
+       maxlength="15"></label></p>
+        <p><label><input type="checkbox" name="edad15" value="15" checked> 15
+       Años</label></p>
+        <p><label><input type="checkbox" name="edad30" value="30" checked> 30
+       Años</label></p>
+        <p><label><input type="checkbox" name="edad45" value="45"> 45
+       Años</label></p>
+        <p><label><input type="checkbox" name="edad60" value="60"> 60
+       Años</label></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+    
+    <form name="formulario" method="get" action="procesar.php">
+        <p>
+        <label for="listado">Libros: </label>
+        <select name="libro" id="listado">
+            <option value="1">IT</option>
+            <option value="2">Carrie</option>
+            <option value="3">El Resplandor</option>
+            <option value="4">Misery</option>
+        </select>
+        </p>
+        <p><input type="submit" value="Enviar"></p>
+    </form> 
+
+    <!--
+        disabled—Este es un atributo booleano que desactiva el elemento. Cuando el atributo
+está presente, el usuario no puede introducir valores o interactuar con el elemento.
+readonly—Este atributo indica que el valor del elemento no se puede modificar.
+
+placeholder—Este atributo muestra un texto en el fondo del elemento que indica al
+usuario el valor que debe introducir.
+
+autocomplete—Este atributo activa o desactiva la función de autocompletar. Los
+valores disponibles son on y off.
+
+novalidate—Este es un atributo booleano para el elemento <form> que indica que el
+formulario no debería ser validado.
+
+formnovalidate—Este es un atributo booleano para los elementos <button> e
+<input> de tipo submit e image que indica que el formulario al que pertenecen no
+debería ser validado.
+
+required—Este es un atributo booleano que indica al navegador que el usuario debe
+seleccionar o insertar un valor en el elemento para validar el formulario.
+
+multiple—Este es un atributo booleano que indica al navegador que se pueden insertar
+múltiples valores en el campo (se aplica a elementos <input> de tipo email y file).
+
+autofocus—Este atributo booleano solicita al navegador que mueva el foco al elemento
+tan pronto como se carga el documento.
+
+pattern—Este atributo define una expresión regular que el navegador debe usar para
+validar el valor insertado en el campo.
+
+form—Este atributo asocia el elemento con un formulario. Se usa para conectar un elemento
+con un formulario cuando el elemento no se define entre las etiquetas <form>. El valor
+asignado a este atributo debe ser el mismo asignado al atributo id del elemento <form>.
+
+spellcheck—Este atributo solicita al navegador que compruebe la ortografía y gramática de
+    -->
+</body>
+</html>

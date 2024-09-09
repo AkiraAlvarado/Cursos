@@ -1,0 +1,34 @@
+.card{
+    margin-bottom: 1rem;
+    &_img{
+        display: block;
+    }
+
+    &_content {
+        padding: 1rem;
+        border: 1px solid var(--color-border);
+    }
+
+    &_subtitle{
+        margin-top: -1rem;
+        margin-bottom: .5rem;
+        opacity: .6;
+    }
+    &_foter{
+        border-top : 1px solid var(--color-border);
+        margin-top: 1rem;
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
+.cards-grid{
+    @include from(l){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+}

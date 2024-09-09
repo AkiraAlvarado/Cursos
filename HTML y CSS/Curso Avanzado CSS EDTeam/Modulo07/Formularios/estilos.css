@@ -1,0 +1,43 @@
+textarea{
+    resize: vertical;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+input:focus{
+    background-color: red;
+} 
+
+.container:focus-within label{
+    display: none;
+}
+
+.container{
+    position: relative;
+}
+
+.container label{
+    position: absolute;
+    left: 0.25rem;
+}
+
+input:placeholder-shown{
+    background-color: yellow ;
+}
+
+input:valid{
+    /*Los estilos*/
+}
+
+input:invalid{
+    /*Los estilos*/
+}
+
+input::placeholder{
+    /*los estilos */
+}

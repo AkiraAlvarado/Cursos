@@ -1,0 +1,92 @@
+/* Texto 
+
+    Tipografía. La disciplina (area o carrera) que estudia el diseño y uso de tipos de letra.
+
+    Fuente. Un tipo específico de letra, que ha sido creado por un diseñador o por una empresa.
+
+    Glifos. Son los dibujos que representan a cada caracter de la fuente.
+
+    Estilos de fuente. Son las variaciones de una misma fuente (grosor, inclinación). 
+
+    Familia tipográfica. Son varias fuentes con características comunes.
+
+*/
+
+/* Unidades de medida: em y rem 
+
+    font-size: 1.5rem
+
+    1rem = 16px (siempre que no cambies el font-size de :root)
+    1em = 100% del tamaño de fuente del contexto
+
+*/
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    /* font-size: 1rem; */
+}
+
+span {
+    font-size: 1.5em;
+}
+
+/* 
+El span en el h1 mide 3rem * 1.5
+El span en p mide 2rem * 1.5 
+*/
+
+.button {
+    background: hsl(200,80%,45%);
+    color: #fff;
+    padding: 1em 2em;
+    text-decoration: none;
+    border-radius: .25em;
+    font-size: 4rem;
+}
+
+p {
+    border: 1px solid #000;
+    background: #eee;
+    padding: .5em;
+}
+h1 {
+    /* text-align: center; */
+    line-height: 1.3;
+}
+p {
+    /* font-size: 2rem; */
+    /* font-style: italic;
+    font-weight: bold; */
+    /* text-align: center; */
+    line-height: 1.6;
+    /* text-decoration: line-through; */
+    /* text-transform: capitalize; */
+    /* letter-spacing: 0.05em; */
+    /* word-spacing: 1em; */
+
+}
+
+
+/* font-family */
+
+h1 {
+    /* font-family: 'Orbitron', sans-serif; */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Open Sans';
+    color: #FFF;
+    background: hsl(200,10%,30%);
+    /* text-shadow: x y blur color, x y blur color */
+    text-shadow: 1px 1px 0 #000;
+}
+
+h1 {
+    text-shadow: 1px 1px 2px #000;
+    color: #fff;
+}

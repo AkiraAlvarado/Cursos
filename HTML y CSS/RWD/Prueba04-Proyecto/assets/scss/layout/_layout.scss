@@ -1,0 +1,35 @@
+.l-container {
+  max-width     : $max-witdh;
+  padding-left  : 1rem;
+  padding-right : 1rem;
+  display       : flex;
+  margin-left   : auto;
+  margin-right  : auto;
+  height        : 100%;
+  flex-wrap: wrap;
+}
+
+//Anchos personalizados
+
+@for $i from 1 through 20 {
+  .s-#{$i*5} {
+    width: #{$i * 5%};
+  }
+}
+
+@include from (l){
+  @for $i from 1 through 20 {
+    .l-#{$i*5} {
+      width: #{$i * 5%};
+    }
+  }
+}
+
+.center_block{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center_content{
+  text-align: center;
+}

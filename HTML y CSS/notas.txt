@@ -1,0 +1,126 @@
+Notas de CSS
+1.- En el css la especifidad afecta mucho ya que por ejemplos los css por etiquetas como h1,div, section , etc.
+Tienen especifidad 1 , mientras que si agregamos una clase .title , sobreescribira al css por etiqueta ya que este
+tiene más especifidad (10 de especifididad)
+es así que si tenemos
+
+<h1 class=title> Hola </h1>
+
+
+y un css de 
+h1{
+color: red
+}
+
+.title{
+color: blue
+}
+el color será BLUE
+2.- el ajax es la capactidad de la computadora para que el sistema web se recargue , solo con los ojbetos que cambien
+por ejemplo si al presionar un boton en la web lo unico que cambia es una foto , se utiliza ajax para que no 
+se tenga que cargar toda la pagina gastando recursos y solo se cargue esa foto que es la diferencia con la pag. original.
+
+3.- Herencia 
+inherit(se fuerza que el elemento herede la clase del padre) e inicial (se fuerza a que no se here la clase del padre)
+
+4.- No puedo darle Hight o width a un elemento que sea en linea como input, span , etc.
+
+5.- Display: none se usa para ocultarelementos , por ejemplo cuando en responsive quieres ocultar cosas o para animaciones
+que un elemento se vea y deje de ver 
+
+6.- NUNCA USAR MARGIN 0AUTO; usar margin-left: auto y margin-right: auto
+
+7.-MARGIN AUTO o centrar con imagenes NO FUNCIONA CON INLINE SOLO CON PROPIEDAD BLOCK (NO INLINE-BLOCK)
+8.- SI TENGO PROBLEMas con los margenes ir a clase 4.3 de css , colapsado vertical de margenes.
+
+9.- *:before, *:after{
+box-sizing: border-box;
+}
+
+Se utiliza para que se respete el width y height del box model
+
+10.- La unica funcionalidad real del outilne es para resaltar ciertas cosas. 
+
+11. una buena practica es poner margen solo hacia abajo, es decir bottom, ya que hacia arriba se colapsa
+para arreglar eso, se debe poner un padding al elemento padre.
+p:not(:last-child) por ejeemplo aqui dice que todos los parrafos que no sean el ultimo, debe tener margin bootom
+
+12.- Background atachhmente sirve para quedar fijada una imagen 
+
+13.- Flex grow le da un indice para que crezca y flex Shrink para que se achique
+
+14.- Flex basis pone el tamaño inicial en el cual se van a agrandar o achicar, además con flex basis : 0 , se puede hacer que todos los elementos midan lo mismo
+
+16.- Align-self solo sirve cuando quiero alinear un solo item a una posición diferente como por ejemplo align-self: flex-start
+
+17.- Se puede poner una clase disccount{ order:-1} para que por ejemplos todos los que tengan descuento vallan arriba de la lista de flex
+
+18.- Hay algunos problemas con los margenes ya que se crean cajas extra, así que de ser así poner margin: 0 y box-sizing: border-box
+
+19.- Cuando le das flex al papa todos los hijos son flex-items es decir tienen la capcatidad de contraerse flex-shrink: 1 para hacer que encajen en una sola fila
+siempre se van a contraer, para eliminar este error es poner flex-shrink:0 cuando hay elementos aplastados como imagenes chiquitas
+
+20.- Se puede usar  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr)); para crear 
+
+RWDDDDDDDDDDDDDDDDDDDDDDDDDDDD-----------------------------------------------------
+
+1.- em (tamaño  de fuente del contexto) y rem (tamaño fuente del root)
+
+2.- 1vw= 1% del ancho del viewport
+    1vg= 1% del alto del viewport
+    1vmin = 1% del lado menor del viewport
+    1vmax = 1% del lado mayor del viewport
+
+3.- El em se usa para cosas internas como paddings internos, botones y el rem para layout, alturas margenes , etc.
+
+
+4.- Se usa la resolución de 16:9 para videos 
+
+5.- Cuando uso las media querys , debo cambiar el orden si en caso sea grid para adaptar el tamaño, font size y hasta hacer responsivas las imagenes o darles medidas.
+
+6.- Siempre poner una fuente 'Roboto, sans-serif; (y otra opción con coma como reserva)
+
+7.- li::marker{
+	content: 'emoticon'
+}
+para que cada li comienze con un simbolo o emoticon
+
+8.-Overflow-wrap: anywhere, para que no sea desborde, corta la palabra donde sea
+
+media screen and (min-width: 320px) {
+    .header {
+        min-height: 65vmin;
+    } 
+    
+    .titulo{
+        font-size:  1.5em;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .header {
+        min-height: 65vmin;
+    } 
+    
+    .titulo{
+        font-size:  2em;
+    }
+}
+      
+@media screen and (min-width: 960px) {
+    .header {
+        min-height: 75vmin;
+        } 
+    .titulo{
+        font-size: 2.8em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        min-height: 80vmin;
+    } 
+    .titulo{
+        font-size: 3.5em;
+    }
+} 
